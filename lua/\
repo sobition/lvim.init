@@ -1,5 +1,0 @@
-local kind = require('doodler.kind')
-
-lvim.leader = "space"
-
-lvim.keys.normal_mode["<leader>gs"] = ":Git"

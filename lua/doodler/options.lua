@@ -1,5 +1,3 @@
-lvim.format_on_save = true
-
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
@@ -44,3 +42,4 @@ vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,
 lvim.builtin.telescope.defaults.path_display = {
   shorten = 4,
 }
+lvim.builtin.gitsigns.opts.current_line_blame = true

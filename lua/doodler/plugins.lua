@@ -45,7 +45,7 @@ lvim.plugins = {
 
   { "tpope/vim-repeat" },
   { 'tpope/vim-fugitive' },
-  
+
   { "ThePrimeagen/harpoon" },
 
   {
@@ -58,7 +58,8 @@ lvim.plugins = {
     'nvim-telescope/telescope-frecency.nvim',
     dependencies = { 'nvim-telescope/telescope.nvim', 'kkharji/sqlite.lua' },
   },
-  { 'maxbrunsfeld/vim-yankstack' }
+  { 'maxbrunsfeld/vim-yankstack' },
+  { 'lewis6991/gitsigns.nvim' }
 
 }
 
