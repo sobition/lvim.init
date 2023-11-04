@@ -30,8 +30,20 @@ lvim.builtin.project.patterns = {
   "package.json",
   "requirements.txt",
 }
+require('lvim.lsp.manager').setup("eslint", {})
 
-vim.shellcmdflag = "-ic"
+require("lvim.lsp.null-ls.formatters").setup({
+  {
+    name = "prettier",
+    filetypes = {
+      'typescript',
+      'typescriptreact',
+      'javascript',
+      'javascriptreact',
+    }
+  }
+})
+-- vim.opt_global.shellcmdflag = -ic
 
 lvim.format_on_save = true
 
