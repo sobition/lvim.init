@@ -46,7 +46,6 @@ lvim.plugins = {
   { "tpope/vim-repeat" },
   { 'tpope/vim-fugitive' },
 
-  { "ThePrimeagen/harpoon" },
 
   {
     'smoka7/hop.nvim',
@@ -59,7 +58,7 @@ lvim.plugins = {
     dependencies = { 'nvim-telescope/telescope.nvim', 'kkharji/sqlite.lua' },
   },
   { 'maxbrunsfeld/vim-yankstack' },
-  { 'lewis6991/gitsigns.nvim' }
+  { 'lewis6991/gitsigns.nvim' },
 
 }
 

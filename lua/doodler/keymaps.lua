@@ -9,13 +9,14 @@ lvim.keys.normal_mode["<Space><Space>"] = ":Telescope buffers<CR>"
 -- lvim.keys.normal_mode["<Space>sF"] = ":Telescope find_files<CR>"
 lvim.keys.normal_mode["<Space>sd"] = ":Telescope diagnostics<CR>"
 lvim.keys.normal_mode["<Space>f"] = ":Telescope current_buffer_fuzzy_find<CR>"
+lvim.keys.normal_mode["<Space>fg"] = ":Telescope live_grep<CR>"
 
---! Harpoon !--
--- lvim.keys.normal_mode["<Space>a"] = ":lua require('harpoon.mark').add_file()<CR>"
--- lvim.keys.normal_mode["<C>e"] = ":lua require('harpoon.ui').toggle_quick_menu()<CR>"
--- lvim.keys.normal_mode["<C>h"] = ":lua require('harpoon.ui').nav_file(1)<CR>"
--- lvim.keys.normal_mode["<C>n"] = ":lua require('harpoon.ui').nav_file(2)<CR>"
--- lvim.keys.normal_mode["<C>b"] = ":lua require('harpoon.ui').nav_file(3)<CR>"
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+Terminal",
+  f = { "<cmd>ToggleTerm<cr>", "Floating terminal" },
+  v = { "<cmd>2ToggleTerm size=80 direction=vertical<cr>", "Split vertical" },
+  h = { "<cmd>2ToggleTerm size=80 direction=horizontal<cr>", "Split horizontal" },
+}
 
 lvim.lsp.buffer_mappings.normal_mode["gr"] = {
   ":lua require'telescope.builtin'.lsp_references()<cr>",
