@@ -31,6 +31,7 @@ lvim.builtin.project.patterns = {
   "requirements.txt",
 }
 require('lvim.lsp.manager').setup("eslint", {})
+require('lvim.lsp.manager').setup("solargraph", {})
 
 require("lvim.lsp.null-ls.formatters").setup({
   {
@@ -45,12 +46,17 @@ require("lvim.lsp.null-ls.formatters").setup({
 })
 -- vim.opt_global.shellcmdflag = -ic
 
+--! gitLinker !--
+require('gitLinker').setup({
+  mappings = nil,
+})
+
 lvim.format_on_save = true
 
 vim.o.linebreak = true
 vim.o.wrap = false
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
+vim.o.relativenumber = true
 lvim.builtin.telescope.defaults.path_display = {
   shorten = 4,
 }

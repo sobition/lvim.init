@@ -1,17 +1,17 @@
 lvim.plugins = {
   --! uncomment this if you want enable copilot
 
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   cmd = "Copilot",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("copilot").setup({
-  --       suggestions = { enabled = false },
-  --       panel = { enabled = false },
-  --     })
-  --   end,
-  -- },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestions = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
 
   {
     "folke/trouble.nvim",
@@ -62,19 +62,24 @@ lvim.plugins = {
   { 'maxbrunsfeld/vim-yankstack' },
   { 'lewis6991/gitsigns.nvim' },
 
+  {
+    'ruifm/gitlinker.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+  }
+
 }
 
 --! uncomment this if you want enable copilot
 
--- table.insert(lvim.plugins, {
---   "zbirenbaum/copilot-cmp",
---   event = "InsertEnter",
---   dependencies = { "zbirenbaum/copilot.lua" },
---   config = function()
---     local ok, cmp = pcall(require, "copilot_cmp")
---     if ok then cmp.setup({}) end
---   end,
--- })
+table.insert(lvim.plugins, {
+  "zbirenbaum/copilot-cmp",
+  event = "InsertEnter",
+  dependencies = { "zbirenbaum/copilot.lua" },
+  config = function()
+    local ok, cmp = pcall(require, "copilot_cmp")
+    if ok then cmp.setup({}) end
+  end,
+})
 
 lvim.builtin.telescope.on_config_done = function(telescope)
   pcall(telescope.load_extension, "frecency")
