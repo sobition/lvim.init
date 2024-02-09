@@ -42,6 +42,15 @@ require("lvim.lsp.null-ls.formatters").setup({
       'javascript',
       'javascriptreact',
     }
+  },
+  {
+    name = "eslint_d",
+    filetypes = {
+      'typescript',
+      'typescriptreact',
+      'javascript',
+      'javascriptreact',
+    }
   }
 })
 -- vim.opt_global.shellcmdflag = -ic
@@ -51,7 +60,7 @@ require('gitLinker').setup({
   mappings = nil,
 })
 
-lvim.format_on_save = true
+lvim.format_on_save.enabled = true
 
 vim.o.linebreak = true
 vim.o.wrap = false
@@ -60,4 +69,5 @@ vim.o.relativenumber = true
 lvim.builtin.telescope.defaults.path_display = {
   shorten = 4,
 }
+lvim.builtin.telescope.theme = "center"
 lvim.builtin.gitsigns.opts.current_line_blame = true

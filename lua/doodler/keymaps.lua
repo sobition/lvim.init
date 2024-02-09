@@ -43,9 +43,4 @@ lvim.builtin.which_key.mappings["t"] = {
   h = { "<cmd>2ToggleTerm size=80 direction=horizontal<cr>", "Split horizontal" },
 }
 
-lvim.keys.normal_mode['<C-s>'] = function()
-  vim.cmd('w')
-  vim.cmd(':!yarn run format %')
-end
-
 lvim.keys.normal_mode["<Space>GS"] = ":Git <CR>"
