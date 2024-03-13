@@ -12,7 +12,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
 }
-
+lvim.colorscheme = 'dracula'
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.diagnostics.enable = true
 -- lvim.builtin.nvimtree.setup.modified.enable = true

@@ -48,7 +48,6 @@ lvim.plugins = {
   { "tpope/vim-repeat" },
   { 'tpope/vim-fugitive' },
 
-
   {
     'smoka7/hop.nvim',
     version = "*",
@@ -65,8 +64,33 @@ lvim.plugins = {
   {
     'ruifm/gitlinker.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
-  }
+  },
 
+  {
+    'Mofiqul/dracula.nvim'
+  },
+
+  {
+    "tpope/vim-rails",
+    cmd = {
+      "Eview",
+      "Econtroller",
+      "Emodel",
+      "Smodel",
+      "Sview",
+      "Scontroller",
+      "Vmodel",
+      "Vview",
+      "Vcontroller",
+      "Tmodel",
+      "Tview",
+      "Tcontroller",
+      "Rails",
+      "Generate",
+      "Runner",
+      "Extract"
+    }
+  },
 }
 
 --! uncomment this if you want enable copilot
