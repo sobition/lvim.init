@@ -60,6 +60,8 @@ require('gitLinker').setup({
   mappings = nil,
 })
 
+require 'colorizer'.setup()
+
 lvim.format_on_save.enabled = true
 
 vim.o.linebreak = true

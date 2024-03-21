@@ -91,6 +91,9 @@ lvim.plugins = {
       "Extract"
     }
   },
+
+  { 'NvChad/nvim-colorizer.lua' }
+
 }
 
 --! uncomment this if you want enable copilot
