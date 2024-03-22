@@ -18,7 +18,7 @@ lvim.builtin.nvimtree.setup.diagnostics.enable = true
 -- lvim.builtin.nvimtree.setup.modified.enable = true
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.nvimtree.setup.renderer.icons.show.modified = true
-
+lvim.builtin.lualine.sections.lualine_c = { { "filename", path = 1 } }
 lvim.builtin.treesitter.ignore_install = {}
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -68,8 +68,8 @@ vim.o.linebreak = true
 vim.o.wrap = false
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 vim.o.relativenumber = true
-lvim.builtin.telescope.defaults.path_display = {
-  shorten = 4,
-}
+-- lvim.builtin.telescope.defaults.path_display = {
+--   shorten = 4,
+-- }
 lvim.builtin.telescope.theme = "center"
 lvim.builtin.gitsigns.opts.current_line_blame = true
