@@ -92,8 +92,9 @@ lvim.plugins = {
     }
   },
 
-  { 'NvChad/nvim-colorizer.lua' }
+  { 'NvChad/nvim-colorizer.lua' },
 
+  { 'brooth/far.vim' }
 }
 
 --! uncomment this if you want enable copilot
