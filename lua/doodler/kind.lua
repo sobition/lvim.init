@@ -10,7 +10,7 @@ M.cmp_kind = {
   EnumMember = " ",
   Event = " ",
   Field = "ﰠ ",
-  File = " ",
+  File = "",
   Folder = " ",
   Function = " ",
   Interface = " ",
@@ -79,7 +79,7 @@ M.nvim_tree_icons = {
 }
 
 M.symbols_outline = {
-  File = "",
+  File = "",
   Module = "",
   Namespace = "",
   Package = "",
@@ -89,7 +89,7 @@ M.symbols_outline = {
   Field = "",
   Constructor = "",
   Enum = "練",
-  Interface = "ﰮ",
+  Interface = "",
   Function = "",
   Variable = "",
   Constant = "",
@@ -113,7 +113,7 @@ M.todo_comments = {
   HACK = " ",
   WARN = "裂",
   PERF = "龍",
-  NOTE = " ",
+  NOTE = "",
   ERROR = " ",
   REFS = "",
 }
