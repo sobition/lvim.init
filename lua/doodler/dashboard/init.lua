@@ -1,11 +1,11 @@
-local kind = require("doodler.kind")
+local kind = require("doodler.dashboard.kind")
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "custom"
 
 local header = {
   type = "text",
-  val = require("doodler.banners").dashboard(),
+  val = require("doodler.dashboard.banners").dashboard(),
   opts = {
     position = "center",
     hl = "Comment",
