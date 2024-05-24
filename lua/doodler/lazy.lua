@@ -1,6 +1,4 @@
 lvim.plugins = {
-  --! uncomment this if you want enable copilot
-
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
@@ -22,7 +20,11 @@ lvim.plugins = {
     "folke/todo-comments.nvim",
     event = "BufRead",
     config = function()
-      require("todo-comments").setup()
+      require("todo-comments").setup({
+        keywords = {
+          TODO = { icon = " ", color = "info", alt = { "todo", "Todo" } },
+        },
+      })
     end
   },
 
@@ -37,7 +39,6 @@ lvim.plugins = {
     end
   },
 
-  { "tpope/vim-surround" },
   {
     "windwp/nvim-ts-autotag",
     config = function()
@@ -45,29 +46,14 @@ lvim.plugins = {
     end,
   },
 
-  { "tpope/vim-repeat" },
-  { 'tpope/vim-fugitive' },
-
-  {
-    'smoka7/hop.nvim',
-    version = "*",
-    opts = {},
-  },
-
   {
     'nvim-telescope/telescope-frecency.nvim',
     dependencies = { 'nvim-telescope/telescope.nvim', 'kkharji/sqlite.lua' },
   },
-  { 'maxbrunsfeld/vim-yankstack' },
-  { 'lewis6991/gitsigns.nvim' },
 
   {
     'ruifm/gitlinker.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
-  },
-
-  {
-    'Mofiqul/dracula.nvim'
   },
 
   {
@@ -91,14 +77,15 @@ lvim.plugins = {
       "Extract"
     }
   },
-
-  { 'NvChad/nvim-colorizer.lua' },
-
-  { 'brooth/far.vim' }
+  "tpope/vim-surround",
+  "tpope/vim-repeat",
+  'tpope/vim-fugitive',
+  'NvChad/nvim-colorizer.lua',
+  'brooth/far.vim',
+  'maxbrunsfeld/vim-yankstack',
+  'lewis6991/gitsigns.nvim',
+  'Mofiqul/dracula.nvim',
 }
-
---! uncomment this if you want enable copilot
-
 table.insert(lvim.plugins, {
   "zbirenbaum/copilot-cmp",
   event = "InsertEnter",
@@ -108,7 +95,3 @@ table.insert(lvim.plugins, {
     if ok then cmp.setup({}) end
   end,
 })
-
-lvim.builtin.telescope.on_config_done = function(telescope)
-  pcall(telescope.load_extension, "frecency")
-end
